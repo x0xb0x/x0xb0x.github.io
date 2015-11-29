@@ -1,0 +1,222 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/x0xb0x/x0xb0xcss-man.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/patternedit/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="../../../../../www.ladyada.net/feed/index.html" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>x0xb0x user manual - pattern edit</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style><!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader" ><img src="../../../../images/wavebubble/topheaderbadge.png" width="171" height="190"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->x0xb0x <!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->User Manual: Pattern Edit Mode <!-- InstanceEndEditable --></span>
+
+    <ul id="menu">
+        <li class="first"></li>
+        <li><div class="menuitemtext"><a href="index.html">About</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://www.ladyada.net/rant/?cat=2">News</a></div> </li>
+        <li> <div class="menuitemtext"><a href="FAQ.html">F.A.Q.</a></div> </li>
+        <li><div class="menuitemtext"><a href="samples.html">Samples</a></div> </li>
+        <li><div class="menuitemtext"><a href="gallery.html">Gallery</a></div> </li>
+        <li><div class="menuitemtext"><a href="mods.html">Mods</a></div> </li>
+        <li> <div class="menuitemtext"><a href="fab/index.html">Make it! </a></div> </li>
+        <li> <div class="menuitemtext"><a href="manual/index.html">Use it! </a></div> </li>
+        <li><div class="menuitemtext"><a href="http://sourceforge.net/projects/x0xb0x/">Firmware</a></div></li>
+        <li><div class="menuitemtext"><a href="software/index.html">Software</a></div> </li>
+        <li><div class="menuitemtext"><a href="download.html">Download</a></div> </li>
+        <li><div class="menuitemtext"><a href="resc.html">Resources</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://forums.ladyada.net/" target="_blank">Forums</a></div></li>
+        <li> <div class="menuitemtext"><a href="http://www.ladyada.net/wiki/x0x:x0xd0x">Wiki</a></div> </li>
+        <li class="last"></li>
+    </ul>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>A 'pattern' is a sequence of notes (up to 16) which are used as building blocks for tracks. Every note in a pattern is considered to be a 1/16th note. Unless <em>computer control</em> mode is used, this is the main method by which the x0xb0x is programmed. </p>
+            <p>Pattern edit mode is how one enters new patterns and edits existing patterns in the x0xb0x sequencer. The original TB-303 saved patterns in bank ram. In the x0xb0x. patterns are saved on an external EEPROM chip (25LC640 or similar) which does not require battery backup. There are 16 'banks' and 8 'locations' in each bank, allowing 128 possible patterns. If, for some reason, this is not enough space, the EEPROM chip may be (carefully) removed and replaced with an equivalent part, which can then be filled with new &amp; exciting patterns. </p>
+            <p>The Roland TB-303 also used a strange method of programming which required entering notes and timebases seperately, which sometimes would lead to &quot;interesting patterns&quot; appearing in memory. This technique is not used, although you are free to drink heavily before programming the x0xb0x, which may also elict &quot;interesting patterns.&quot;</p>
+            <p>Since there is no seperate time-base editing for a pattern, 1/8th notes, quarter notes, etc. are created by placing multiple identical 1/16th notes in a row and then sliding between them. (Essentially, this is how the original TB-303 did it.) </p>
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To enter pattern edit mode, turn the function knob to <strong>Pattern Edit</strong></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>The basic method by which one programs patterns is:</p>
+            <ol>
+              <li>Select which bank/location to edit, this loads the pattern from memory into a 'scratch pad' </li>
+              <li> Use either <em>step-write</em> (go though each note one at a time, adding or changing notes) or <em>run-write</em> (play the pattern repeatedly and change notes as buttons are pressed) mode to modify the scratch pad</li>
+              <li>Save the scratch pad back into the original bank/location. Alternately, the scratch pad can be tossed out. </li>
+            </ol>
+          <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Selecting the Pattern (Bank and Location) <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>Once the x0xb0x has been placed in <em>pattern edit</em> mode, the desired bank/location must be selected. This will determine which pattern is to be edited. </p>
+            <table >
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Change banks by turning the bank knob. Doing so will load the 'scratch pad' with the new pattern indicated, and therefore throw out any unsaved modifications to the current pattern. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>The pattern is identified by which of the bottom 8 key LEDs is lit. By default the first LED (location 1) is lit. To change locations, press one of the 8 numbered keys. Doing so will load the 'scratch pad' with the new pattern indicated, and therefore throw out any unsaved modifications to the current pattern. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>At this point, you can start editing the scratch pad using either<em> run-write</em> or <em>step-write </em>mode.</td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Editing Patterns in Run-write Mode <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p><em>Run-write</em> mode allows you to listen to the pattern and modify it 'on the fly.' New notes cannot be added in <em>run-write</em> mode, neither can the pattern be shortened. The tempo at which the pattern is 'run' is set by the tempo knob (no other syncs are available). </p>
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To enter run-write mode, press <strong>R/S</strong>. You can also get to <em>run-write</em> mode from <em>step-edit</em> mode. The <strong>R/S</strong> key should light up.</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>The pattern will now loop in time with the tempo. Each note location (out of 16) is indicated on the light-strip. The current note data (rest, accent, slide, octave, note) is indicated using the LEDs.</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>The current note data can be changed by pressing <strong>REST</strong> (turns note into a rest note), <strong>ACCENT</strong> &amp; <strong>SLIDE </strong> (toggles accent and slide on that note), octave <strong>UP</strong> (raises note one octave, no higher than 'high' octave), octave <strong>DOWN</strong> (lowers note one octave, no lower than 'low' octave) or any of the 13 note keys, changing to the note in the same octave as the previous. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Pressing the <strong>DONE</strong> key at any time saves the entire scratch pad back into permanent memory, effectively replacing the previous pattern. The <strong>DONE</strong> LED should blink, and the pattern will continue looping. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To leave run-write mode (retaining the scratch pad data but not saving it to permanent memory) press the <strong>R/S</strong> key again at any time. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Pressing <strong>CHAIN</strong> during run-write mode will fill the scratch pad with random note data. This is a lot of fun, you should try it!</td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+          <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Editing Patterns in Step-write Mode <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p><em>Step-write</em> mode is the comprehensive way to write new patterns or edit existing patterns. Each location in the pattern is stepped through in order to change the data. </p>
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To enter <em>step-write</em> mode, press the <strong>NEXT</strong> key. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>The current note being edited in the scratch pad is indicated on the light-strip. The current note data (rest, accent, slide, octave, note) is indicated using the LEDs over the relevant keys. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>The current note data can be changed by pressing <strong>REST</strong> (turns note into a rest note), <strong>ACCENT</strong> &amp; <strong>SLIDE </strong> (toggles accent and slide), octave <strong>UP</strong> (raises note one octave, no higher than 'high' octave), octave <strong>DOWN</strong> (lowers note one octave, no lower than 'low' octave) or any of the 13 note keys, changing to the note in the same octave as the previous. The new note will play immediately, indicating the change. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td><p>Pressing the <strong>NEXT</strong> key moves to the next note in the pattern scratch pad. Likewise, pressing the <strong>PREV</strong> key moves to the previous note in the pattern scratch pad. The note location will be indicated on the strip lights <br>
+                  The <strong>PREV</strong> LED will not light up, this is normal</p>
+                </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td><p>If the note is an 'end of pattern' note (0xFF) then the <strong>DONE</strong> LED will be lit. If <strong>NEXT</strong> is pressed, the note location will be reset back to 1. If a note key (or <strong>REST</strong>) is pressed at this point, then the current note will change from 'end of pattern' into the new note. Once changed from an 'end of pattern' note, pressing <strong>NEXT</strong> will proceed to the next note location <em>which may or may not be an 'end of pattern' note</em> depending on what was in the pattern when it was loaded into scratch memory. (i.e., by changing that note from an 'end of pattern' note, the next note has not been changed into an 'end of pattern' note!)</p>
+                <p>Likewise, pressing <strong>PREV</strong> at note location 1 will set the position to the last note of the pattern (which is defined as either the first location that contains 0xFF or location 16) </p></td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td><p>To save the scratch pad into permanent memory (and exit step-write mode), the <strong>DONE</strong> key must be pressed on the <em>last note of the pattern.</em> For example, if the pattern is 4 notes long, the <strong>DONE</strong> key must be pressed when the note location #4 LED is lit. This means that note location #5 will be changed from whatever it was into an 'end of pattern' note. If the pattern is a full 16 notes long (maximum possible pattern length) then the <strong>DONE</strong> key must be pressed when the 16th note location LED is lit. Doing otherwise will delete a note from your pattern!</p>
+                </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td><p>To listen to the pattern in the scratch pad set to the current tempo, press <strong>R/S</strong> to enter <em>run-write</em> mode. </p>
+                <p>Likewise, to exit <em>step-write</em> mode without saving the scratch pad to permanent memory, press <strong>R/S</strong> twice, to enter and leave run-write mode.</p></td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Pressing <strong>CHAIN</strong> doesn't do anything in<em> step-write</em> mode. </td>
+              </tr>
+			  
+            </table>
+            <p>&nbsp;</p>
+          <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/patternedit/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+</html>

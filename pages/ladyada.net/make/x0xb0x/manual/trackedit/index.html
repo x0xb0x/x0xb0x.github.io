@@ -1,0 +1,165 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/x0xb0x/x0xb0xcss-man.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/trackedit/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="../../../../../www.ladyada.net/feed/index.html" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>x0xb0x</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader" ><img src="../../../../images/wavebubble/topheaderbadge.png" width="171" height="190"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->x0xb0x<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->User Manual: Track Edit Mode <!-- InstanceEndEditable --></span>
+    <ul id="menu">
+        <li class="first"></li>
+        <li><div class="menuitemtext"><a href="index.html">About</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://www.ladyada.net/rant/?cat=2">News</a></div> </li>
+        <li> <div class="menuitemtext"><a href="FAQ.html">F.A.Q.</a></div> </li>
+        <li><div class="menuitemtext"><a href="samples.html">Samples</a></div> </li>
+        <li><div class="menuitemtext"><a href="gallery.html">Gallery</a></div> </li>
+        <li><div class="menuitemtext"><a href="mods.html">Mods</a></div> </li>
+        <li> <div class="menuitemtext"><a href="fab/index.html">Make it! </a></div> </li>
+        <li> <div class="menuitemtext"><a href="manual/index.html">Use it! </a></div> </li>
+        <li><div class="menuitemtext"><a href="http://sourceforge.net/projects/x0xb0x/">Firmware</a></div></li>
+        <li><div class="menuitemtext"><a href="software/index.html">Software</a></div> </li>
+        <li><div class="menuitemtext"><a href="download.html">Download</a></div> </li>
+        <li><div class="menuitemtext"><a href="resc.html">Resources</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://forums.ladyada.net/" target="_blank">Forums</a></div></li>
+        <li> <div class="menuitemtext"><a href="http://www.ladyada.net/wiki/x0x:x0xd0x">Wiki</a></div> </li>
+        <li class="last"></li>
+    </ul>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>Tracks are composed of patterns. Once you have written a few patterns you like, you can string them together into patterns. There are 16 different tracks, and each track can be 16 patterns long. Tracks, like patterns, are stored in the EEPROM.</p>
+            <p>Each pattern in a track also has, associated with it, a 'rest' flag, an 'accent' flag, a 'slide' flag, and 5 bits of pitch-shift. These allow the pattern to be completely muted, accented, slid, or shifted up or down a little more than an octave.</p>
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To enter <em>track edit </em>mode, turn the <strong>Function</strong> knob to <strong>Track Edit </strong></td>
+              </tr>
+            </table>
+			<p>Like <em>Pattern Edit</em> mode, tracks are loaded from EEPROM into a scratch pad which is then modified by the user. When you feel like the scratch pad contains the track you want, it can be saved back into the EEPROM.</p>
+		  <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Selecting the track <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>While not in step-write or run mode, one can select the track to be edited. </p>
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Make sure you're not in <em>run</em> or <em>step-write</em> mode, the <strong>R/S </strong>and<strong> STEP</strong> LEDs should not be lit. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>The current track being edited (#1-16) is displayed on the strip of 16 LEDs by a blinking LED. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To change the track, turn the <strong>Bank</strong> knob. This will throw out the current scratch-pad and load the newly selected track from EEPROM. </td>
+              </tr>
+            </table>
+			<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Step-write mode <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>Unlike pattern edit mode, there is no 'run-write' method to modifying tracks. Therefore you must use step-write mode, which goes through the 16 patterns in a track and individually select the pattern, pitch shift, and RAS flags. </p>
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To begin <em>step-write</em>, press the <strong>NEXT</strong> button (you can do this from <em>track-selection</em> or <em>run</em> mode).</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td><p>The current location (1-16) in the track is indicated by a blinking light in the light strip. </p>
+                  <p>The bank and location of the current pattern in the track location is indicated by a solid light in the light strip, and a solid light in the numbered keys. The current pattern will also play in a loop. </p></td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To set the pattern in the current track location: turn the <strong>BANK</strong> knob (to set the bank) and press the one of the <strong>numbered</strong> keys (to set the location in the bank).</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To set the all-rest, all-accent or all-slilde flags for that track location, press any of the <strong>RAS</strong> keys. The current flag status is displayed by the LED above the corresponding button. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To shift the pitch up, hold down the <strong>UP</strong> key. The current pitch shift is displayed as a blinking light on the note keys. A pitch shift of 0 is displayed as low C, a pitch shift of +1/2 note is displayed as C#, A pitch shift of +1 octave is displayed as high C. If no LEDs light, the current pitch shift is negative. To select a new pitch shift, press a note key while the <strong>UP</strong> key is held down. The new pitch shift value will start blinking </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To shift the pitch down, hold down the <strong>DOWN</strong> key. The current pitch shift is displayed as a blinking light on the note keys. A pitch shift of 0 is displayed as high C, a pitch shift of -1/2 note is displayed as B, A pitch shift of -1 octave is displayed as low C. If no LEDs light, the current pitch shift is positive. To select a new pitch shift, press a note key while the <strong>DOWN</strong> key is held down. The new pitch shift value will start blinking. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To advance to the next track location, press the <strong>NEXT</strong> key. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>To save the track to EEPROM, press the <strong>DONE</strong> key while at the last location of the track. This will also exit <em>step-write</em> mode.</td>
+              </tr>
+            </table>
+			<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/trackedit/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+</html>

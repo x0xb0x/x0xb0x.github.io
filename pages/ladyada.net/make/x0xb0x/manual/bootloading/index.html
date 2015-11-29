@@ -1,0 +1,183 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/x0xb0x/x0xb0xcss-man.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/bootloading/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="../../../../../www.ladyada.net/feed/index.html" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>x0xb0x</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader" ><img src="../../../../images/wavebubble/topheaderbadge.png" width="171" height="190"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->x0xb0x<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->User Manual: Bootloading <!-- InstanceEndEditable --></span>
+
+    <ul id="menu">
+        <li class="first"></li>
+        <li><div class="menuitemtext"><a href="index.html">About</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://www.ladyada.net/rant/?cat=2">News</a></div> </li>
+        <li> <div class="menuitemtext"><a href="FAQ.html">F.A.Q.</a></div> </li>
+        <li><div class="menuitemtext"><a href="samples.html">Samples</a></div> </li>
+        <li><div class="menuitemtext"><a href="gallery.html">Gallery</a></div> </li>
+        <li><div class="menuitemtext"><a href="mods.html">Mods</a></div> </li>
+        <li> <div class="menuitemtext"><a href="fab/index.html">Make it! </a></div> </li>
+        <li> <div class="menuitemtext"><a href="manual/index.html">Use it! </a></div> </li>
+        <li><div class="menuitemtext"><a href="http://sourceforge.net/projects/x0xb0x/">Firmware</a></div></li>
+        <li><div class="menuitemtext"><a href="software/index.html">Software</a></div> </li>
+        <li><div class="menuitemtext"><a href="download.html">Download</a></div> </li>
+        <li><div class="menuitemtext"><a href="resc.html">Resources</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://forums.ladyada.net/" target="_blank">Forums</a></div></li>
+        <li> <div class="menuitemtext"><a href="http://www.ladyada.net/wiki/x0x:x0xd0x">Wiki</a></div> </li>
+        <li class="last"></li>
+    </ul>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>The x0xb0x firmware is responsible for all of the digital functionality: driving LEDs, reading switches, gating notes to the analog synthesizer, running the sequencer, etc. The firmware is essentially a compiled program that is burned into the microcontroller chip (in this case, the ATmega162). The x0xb0x firmware is written in C and can be (re)compiled using the ubiquitous and free avr-gcc compiler. You are encouraged to add functionality to the x0xb0x, fix any bugs, etc. and exchange firmware updates with others! (Within the constraints of the Open Source license.)</p>
+            <p>Normally, upgrading the firmware is performed by placing the microcontroller into an AVR-compatible programmer (such as the popular STK-500) and using the free AVR programming software to upload the new firmware. However, to make it easier to upload new firmware (and not have to purchase a specialized programmer) we have written and installed a bootloader onto the microcontroller. The bootloader is a small piece of code (.5K) that sits at the end of the program memory (at 15.5K) and is executed first. The bootloader checks to see if the <strong>FUNCTION</strong> knob is turned to <em>bootload mode.</em> If it is, and an escape character (0x1B ascii) is received over the USB connection, it enters <em>bootload mode</em>. If neither of these requirements are met, the bootloader jumps to address 0x0, which starts the x0xb0x firmware.</p>
+            <p>There is virtually no way to permanently confuse the bootloader to the point where firmware cannot be uploaded. (However, you shouldn't try...) Regardless, you should only use <em>bootloader mode</em> when bootloading, as sending certain character commands to the bootloader will erase/overwrite the chip, or (worse) erase/overwrite only part of the chip.</p>
+            <p>Bootloading does not erase or change the data stored in the external EEPROM. Therefore all patterns and tracks are safe from modification.</p>
+            <p>Trying to uploade firmware that is longer than 15.5K will be rejected by the bootloading software program.</p>
+            <p>Setting the <strong>FUNCTION</strong> knob to <em>Bootload</em> while the x0xb0x is already on does not enter <em>bootload mode</em>.</p>
+            <p><font face="Times New Roman, Times, serif">Of course, the <a href="http://www.ftdichip.com/Drivers/FT232-FT245Drivers.htm#VCP">USB driver</a> must be installed as described in the <a href="../../fab/ioboard/index.html">fabrication manual</a></font>. </p>
+		  <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Installing Bootloader Software <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>The bootloader software is written in Java. Therefore you must install a copy of the Java Runtime Enviroment (JRE) or Java Software Development Kit (JSDK). The former is just for running software, the latter comes with a compiler and necessary stuff for building Java apps. Check if you have it installed by running/searching for a program called <font face="Courier New, Courier, mono"><strong>java</strong></font>. (I think MacOS X has a JRE already) </p>
+            <ul>
+              <li>For Windows/Solaris/Linux,<a href="http://java.sun.com/getjava/"> download the latest version of JRE from java.sun.com</a> &amp; install it. </li>
+              <li>Virtually all modern OSs have a JRE available. Search online or at the OS's website for a link. </li>
+            </ul>
+            <p>Since the x0xb0x communicates over serial, you'll need to also download a copy of the JavaComm API library which allows Java to enumerate ports and communicate over them.</p>
+		    <ul>
+		      <li>If you're using Sparc/Solaris/Win32, you should <a href="http://java.sun.com/products/javacomm">download the CommAPI release from Sun</a>.</li>
+	          <li>If you're using Linux <a href="http://users.frii.com/jarvi/rxtx/download.html">Download the RXTX 2.0 </a> library for your OS. Be sure to get the CommAPI compatible version. You'll also need to download the Solaris CommAPI in the previous step. </li>
+		      <li>The MacOS X version of RXTX <a href="http://www.instituteofthefuture.org/technotes/macosjava.html"> is available at the bottom of this page</a>.</li>
+		      <li>For any other OS, you should see if someone has ported RXTX for you</li>
+		    </ul>
+		    <p>CommAPI/RXTX is a little annoying to install.</p>
+		    <p>To install CommAPI for Windows (stolen from <a href="http://mdubuc.freeshell.org/Jolt/">Jolt</a>) </p>
+		    <ol>
+		      <li>Unzip the Java Communications API somewhere on your disk. A commapi folder will be created. There will be three files of interest in the commapi folder: <em>javax.comm.properties</em>, <em>win32comm.dll</em> and <em>comm.jar</em>. You need to install these files in the JRE directory. If you have installed the J2SDK, you need to install these files in the JRE directory under the J2SDK distribution. I'm going to assume you just installed the JRE since most people wont be modifying JAvrProg, just running it.</li>
+	          <li>Copy file <em>javax.comm.properties</em> from the commapi folder to JRE's lib folder. For example, if the JRE is installed in <font face="Courier New, Courier, mono">C:\Program Files\Java\jre1.5.0_02</font>, you need to move the<em> javax.comm.properties</em> file in <font face="Courier New, Courier, mono">C:\Program Files\Java\jre1.5.0_02\lib</font>. </li>
+		      <li>Copy file <em>win32com</em>.dll from commapi folder to JRE's <font face="Courier New, Courier, mono">bin</font> folder (you need to display system files to see this DLL). </li>
+		      <li>Copy file comm.jar from the commapi folder to JRE's <font face="Courier New, Courier, mono">lib\ext</font> directory.(<u>!!!The instructions just say put it in <font face="Courier New, Courier, mono">lib</font> but thats wrong!!!</u>) </li>
+		      <li>Add the Communications API class and the current directory to the CLASSPATH environment variable. On Windows 9x, add the following line to <font face="Courier New, Courier, mono">autoexec.bat</font>:<br>
+                <strong><font face="Courier New, Courier, mono">SET CLASSPATH=C:\PROGRA~1\JAVA\JRE1.5.0_02\LIB\EXT\COMM.JAR;.</font></strong><font face="Courier New, Courier, mono"><br>
+                </font>(change the path to match your directory structure). On other Windows versions (NT, 2000, XP, etc.), the CLASSPATH environment variable can be set using the System utility in the Control Panel. (<font face="Courier New, Courier, mono">Control Panel -&gt; System -&gt; Advanced -&gt; Env. Variables</font>)</li>
+	        </ol>
+		    <p>To install CommAPI for Linux (stolen from <a href="http://mdubuc.freeshell.org/Jolt/">Jolt</a>, untested but should work, tell me if not):</p>
+		    <ol>
+		      <li>Make sure you've downloaded the Solaris SPARC version of the Java Communications API. </li>
+	          <li>Copy file <em>comm.jar</em> from the Java Communications API directory into JRE's<font face="Courier New, Courier, mono"> lib/ext </font>directory. </li>
+		      <li>Download the latest RXTX 2.0 source distribution. </li>
+		      <li>Run <font face="Courier New, Courier, mono"><strong>./configure</strong></font> from the RXTX directory. If not present, the <em>javax.comm.properties</em> file is created in <font face="Courier New, Courier, mono">$JAVA_HOME/jre/lib</font>. </li>
+		      <li>Run <font face="Courier New, Courier, mono"><strong>make</strong></font> to build the package. </li>
+		      <li>Run <font face="Courier New, Courier, mono"><strong>make install</strong></font> to install the RXTX package. A <em>.jar</em> file will be installed in <font face="Courier New, Courier, mono">$JAVA_HOME/jre/lib/ext</font> and two .so librairies will be installed in <font face="Courier New, Courier, mono">$JAVA_HOME/jre/lib/i386</font>.</li>
+		    </ol>
+		    <p>Now, d ownload the latest version of the JAvrProg bootloader from <a href="http://sourceforge.net/projects/javrprog/">SourceForge</a>. Uncompress it somewhere convenient. Open up a command window and go to that directory and type in <strong><font face="Courier New, Courier, mono">java -jar JAvrProg.jar</font></strong><font face="Times New Roman, Times, serif"> and the JAvrProg window should pop up. </font></p>
+		    <p><font face="Times New Roman, Times, serif">If you click on <strong><font face="Courier New, Courier, mono">Program</font>,</strong> the program should print <font face="Courier New, Courier, mono"><strong>Trying to open port COM1 ... Failed to find AVR</strong></font> or something similar, not a bunch of errors. If JAvrProg doesnt show that it tried to open at least one COM port, check to make sure the CommAPI is installed correctly. When the x0xb0x is plugged in, there should be an extra COM port it searches (like, COM3 or COM4 on most computers) </font></p>
+		  <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->How to bootload<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+    
+            <table>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Unplug the x0xb0x, and quit any software that may be using the USB serial port.</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Turn the <strong>FUNCTION</strong> knob to <em>Bootload</em></td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>After a few seconds, plug in the x0xb0x. Since it has not initialized, there may be odd LEDs lit up.</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Start up the bootloading software (&quot;JAvrProg&quot;) on your computer. If it is not installed, follow the installation procedure. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Click on &quot;Browse...&quot; and select the <font face="Courier New, Courier, mono">.hex</font> file to be uploaded.</td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Click on &quot;Program&quot; to begin uploading. You should see in the command window that <font face="Courier New, Courier, mono">x0xb0x1</font> was found. If not, start over from step 1. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>Assuming the firmware write was verified, quit the JAvrProg software and disconnect the x0xb0x. Turn the <strong>FUNCTION</strong> knob to some other location. </td>
+              </tr>
+              <tr align="left" valign="top">
+                <td>&nbsp;</td>
+                <td>After a few seconds, plug in the x0xb0x. Your x0xb0x has been upgraded! </td>
+              </tr>
+            </table>
+            
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/bootloading/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+</html>

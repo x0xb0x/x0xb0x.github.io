@@ -1,0 +1,532 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/make/x0xb0x/x0xb0xcss-fab.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!-- Mirrored from ladyada.net/make/x0xb0x/fab/powersupply.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 17:51:08 GMT -->
+<head>
+<link rel="alternate" type="application/rss+xml" title="ladyada.net blog  RSS Feed" href="../../../../www.ladyada.net/feed/index.html" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7723544-2");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+<!-- InstanceBeginEditable name="overlib" -->
+<script type="text/javascript" src="../../../javascript/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+<!-- InstanceEndEditable -->
+<meta http-equiv="imagetoolbar" content="no" />
+<LINK REL=stylesheet HREF="../../../css/make.css" TYPE="text/css">
+<LINK REL=stylesheet HREF="../../../css/skeleton.css" TYPE="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>x0xb0x - Build manual:  Power supply</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+
+
+<style type="text/css">
+<!--
+.style1 {font-style: italic}
+.style2 {color: #000000}
+.style4 {font-size: 18px}
+.style6 {
+	font-size: 14px;
+	color: #000000;
+}
+.style7 {font-size: 18px; font-weight: bold; }
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+  
+<!-- InstanceBeginEditable name="badge" -->
+<div class="topheader" ><img src="../../../images/x0xb0x/topheaderbadge.png" width="171" height="190"></div>
+<!-- InstanceEndEditable -->
+<span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->x0xb0xBuild Manual<!-- InstanceEndEditable --></span>
+<span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->Power Supply <!-- InstanceEndEditable --></span>
+
+    <ul id="menu">
+        <li class="first"></li>
+        <li><div class="menuitemtext"><a href="index.html">About</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://www.ladyada.net/rant/?cat=2">News</a></div> </li>
+        <li> <div class="menuitemtext"><a href="FAQ.html">F.A.Q.</a></div> </li>
+        <li><div class="menuitemtext"><a href="samples.html">Samples</a></div> </li>
+        <li><div class="menuitemtext"><a href="gallery.html">Gallery</a></div> </li>
+        <li><div class="menuitemtext"><a href="mods.html">Mods</a></div> </li>
+        <li> <div class="menuitemtext"><a href="fab/index.html">Make it! </a></div> </li>
+        <li> <div class="menuitemtext"><a href="manual/index.html">Use it! </a></div> </li>
+        <li><div class="menuitemtext"><a href="http://sourceforge.net/projects/x0xb0x/">Firmware</a></div></li>
+        <li><div class="menuitemtext"><a href="software/index.html">Software</a></div> </li>
+        <li><div class="menuitemtext"><a href="download.html">Download</a></div> </li>
+        <li><div class="menuitemtext"><a href="resc.html">Resources</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://forums.ladyada.net/" target="_blank">Forums</a></div></li>
+        <li> <div class="menuitemtext"><a href="http://www.ladyada.net/wiki/x0x:x0xd0x">Wiki</a></div> </li>
+        <li class="last"></li>
+    </ul>
+
+<div id="lefttcol">
+<!-- this is just a buffer -->
+</div>
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p >The power supply is the first thing to build. Getting this part right is key! A bad power supply will keep the rest of the synth from working &amp; can damage parts so be sure to test it after its built. </p>
+            <p>The power supply takes the 9VAC from the power plug and doubles it to 18VAC which then gets regulated down to 12VDC, 5VDC, 6VDC and 5.333VDC.</p>
+            <p><span class="menubuy style2">Despite having multiple warnings, in large red text, a surprising number of people screw up this section by not checking the resistor values with a multimeter, or verifying that they have purchased a 9VAC adaptor. They then spend a week on the forums trying to debug the problem, which is not fun for anyone involved! Please make sure you have the right parts before you solder them in, eh? </span></p>
+            <p>Read the <a href="http://www.ladyada.net/wiki/x0x/powersupply">x0xwiki on the power supply</a> to understand what its doing, before you jump in.</p>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Tips<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+<p class="menubuy style4"><strong>Check all the resistor values with a multimeter before you solder them in, <u>especially</u> if this is the first time you are trying to read color codes! 90% of problems at this stage are due to incorrect resistors, especially R3, R4 and R5. </strong><span class="style6">(The other 10% is due to people using 9VDC adaptors instead of 9VAC.)</span></p>
+<p class="menubuy style4"><strong>Do not continue if you can't get this part working: you can easily damage the kit.</strong></p>
+<p>You can always click on the images to zoom in if you need more detail. </p>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Parts List <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+		  
+		    <table class="BOM">
+              <tr>
+                <td class="imagetd"><strong>Image</strong></td>
+                <td><strong>Description</strong></td>
+                <td><strong>Part number </strong></td>
+                <td><strong>Notes</strong></td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/acplug.jpg"><img src="../../../images/parts/acplug_t.jpg" width="185" height="200" border="0"></a></div></td>
+                <td><p>9VAC transformer wall wart</p>
+                  <p>300-500mA</p>
+                <p>2.1mm plug </p></td>
+                <td>&nbsp;</td>
+                <td>Make sure this is 9VAC, a common problem is using a 9VDC adaptor.</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/to220-heatsink.jpg"><img src="../../../images/parts/to220-heatsink_t.jpg" width="166" height="135" border="0"></a></div></td>
+                <td>Heat sink (TO-220 size)</td>
+                <td>IC20'</td>
+                <td>Slips on the 5V regulator to keep it from overheating </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/21mmjack.jpg"><img src="../../../images/parts/21mmjack_t.jpg" width="200" height="148" border="0"></a></div></td>
+                <td>2.1mm power jack</td>
+                <td>POWER</td>
+                <td>Plug the 9VAC adaptor into here </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><a href="../../../images/parts/1n4001.jpg"><img src="../../../images/parts/1n4001_t.jpg" width="250" height="84" border="0"></a></td>
+                <td>1N4001 (generic) </td>
+                <td>D40-D43</td>
+                <td>These form a full wave rectifier that smooths the AC voltage into DC </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><a href="../../../images/parts/1n4148.jpg"><img src="../../../images/parts/1n4148_t.jpg" width="250" height="69" border="0"></a></td>
+                <td>1N4148 (generic) </td>
+                <td>D44-D47</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td><p>100 ohm 5% resistor (brown black brown gold)</p>
+                </td>
+                <td>R1</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td><p>1K 5% resistor (brown black red gold)</p>
+                </td>
+                <td>R2</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rGray_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>1.8K 5% resistor (brown grey red gold) </td>
+                <td>R179</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table  class="resistor">
+                    <tr> 
+                      <td><img src="../../../images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>2.2K 5% resistor (red red red gold) </td>
+                <td>R178</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../images/parts/rBlue_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rGray_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>6.8K 5% resistor (blue grey red gold) </td>
+                <td>R3</td>
+                <td>Do not confuse this with the 68K resistor</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><img src="../../../images/parts/2.4k_1p.jpg" width="228" height="158"></div></td>
+                <td>2.4K 1% resistor (red yellow black brown brown)</td>
+                <td>R5</td>
+                <td>Do not confuse this with the 24K resistor</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><img src="../../../images/parts/5.60K.jpg" width="234" height="143"></div></td>
+                <td>5.6K 1% resistor (green blue black brown brown) </td>
+                <td>R4</td>
+                <td>Do not confuse this with a different 1% resistor </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/trim.jpg"><img src="../../../images/parts/trim_t.jpg" width="130" height="129" border="0"></a></div></td>
+                <td>2K (202) trim potentiometer</td>
+                <td>TM6</td>
+                <td>Be sure it says 202 on the edge, or use the multimeter across the two far points to verify its 2K ohm. </td>
+              </tr>
+              <tr> 
+                <td><div align="center"><a href="../../../images/parts/104cerm.jpg"><img src="../../../images/parts/104cerm_t.jpg" width="154" height="200" border="0"></a></div></td>
+                <td>.1uF (104) ceramic capacitor</td>
+                <td>C1, C2, C4, C6</td>
+                <td>Small bypass capacitors</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/10uf.jpg"><img src="../../../images/parts/10uf_t.jpg" width="250" height="86" border="0"></a></div></td>
+                <td>10uF electrolytic capacitor </td>
+                <td>C60, C61</td>
+                <td>Capacitors are directional, and will be destroyed if soldered in backwards.</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/100uf-25v.jpg"><img src="../../../images/parts/100uf-25v_t.jpg" width="200" height="63" border="0"></a></div></td>
+                <td>100uF 25V electrolytic capacitor</td>
+                <td>C7, C8</td>
+                <td>Capacitors are directional, and will be destroyed if soldered in backwards.</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/2200uf.jpg"><img src="../../../images/parts/2200uf_t.jpg" width="200" height="96" border="0"></a></div></td>
+                <td>2200uF electolytic capacitor</td>
+                <td>C3, C5</td>
+                <td>Capacitors are directional, and will be destroyed if soldered in backwards.</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/an6562.jpg"><img src="../../../images/parts/an6565_t.jpg" width="200" height="135" border="0"></a></div></td>
+                <td>AN6562 8-DIP dual Op-Amp</td>
+                <td>IC23</td>
+                <td>Do not confuse with the EEPROM chip which may look similar. Look for 6562 on top. </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/7805.jpg"><img src="../../../images/parts/7805_t.jpg" width="120" height="200" border="0"></a></div></td>
+                <td>(78x05) 5V voltage regulator, 1.0A </td>
+                <td>IC20</td>
+                <td>This part is directional, make sure to put it in the right way. </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/78l06.jpg"><img src="../../../images/parts/78l06_T.jpg" width="137" height="250" border="0"></a></div></td>
+                <td>(78L06) 6V voltage regulator, 0.1A </td>
+                <td>IC21</td>
+                <td>Make sure it says 78L06 on it </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../images/parts/lm336z.jpg"><img src="../../../images/parts/lm336z_t.jpg" width="117" height="250" border="0"></a></div></td>
+                <td>(LM336Z-5.0) 5V voltage reference</td>
+                <td>IC22</td>
+                <td>Make sure it says LM336 on it. </td>
+              </tr>
+            </table>
+		  <p>&nbsp;</p>
+    <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Preparation<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+<p>Before you start, do some preparatory work!</p>
+<p><a href="../../../learn/multimeter/index.html" class="style7">Learn how to use a multimeter! </a></p>
+<p class="style4"><strong><a href="../../../learn/soldering/index.html">Learn how to solder! </a></strong></p>
+<p class="style4"><strong>Test the 9VAC adaptor:</strong></p>
+<p><script language="Javascript" src="../../../flickrnotes277e.html?1282113408"></script><noscript><a href="http://www.flickr.com/photo_zoom.gne?id=1282113408&amp;size=l"><img src="../../../images/metertutorial/9vactransdetail.jpg" width=304 height=363></a>
+</noscript></p>
+<p>
+  Make sure you have a 9V AC transformer adaptor, look for these hints that indicate its AC output. If your kit came with a power supply this isn't necessary
+</p>
+<p align="center">
+ <a href="../../../images/metertutorial/9vactestac.jpg"><img src="../../../images/metertutorial/9vactestac_t.jpg" width="500" height="363" border="1"></a>
+</p>
+<p>
+
+  Measure the output, make sure its at least 10V AC. <a href="../../../learn/multimeter/voltage.html">There is a tutorial on how to measure AC voltages here. </a></p>
+<p><span class="style4"><strong>Test and measure all resistors:</strong></span></p>
+<p align="center"><strong><a href="../../../images/metertutorial/range10k2.jpg"><img src="../../../images/metertutorial/range10k2_t.jpg" width="500" height="375" border="1"></a></strong></p>
+<p>Use your multimeter to measure all the resistors, this will take 3 minutes now and save you a half an hour later. <a href="../../../learn/multimeter/resistance.html">There is a tutorial on how to measure resistors here. </a></p>
+<p>Also, test the 2K trimpot, make sure you've got the 2Kohm version and not one of the other 3 trimpots.</p>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Time to solder! <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+Ok get your tools ready<p>
+</p>
+<table class="assembly">
+  <tr>
+    <td class="imagetd"><script language="Javascript" src="../../../flickrnotes2f91.html?1297460358"></script><noscript><a href="http://www.flickr.com/photo_zoom.gne?id=1297460358&amp;size=l"><img src="../../../images/x0xb0x/fab/ps/psupparts_t.jpg" width=500 height=375></a>
+    </noscript>
+    </td>
+    <td valign="top">Check the kit to verify you have all the parts necessary</td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p align="center"><a href="../../../images/x0xb0x/fab/ps/readybot.jpg"><img src="../../../images/x0xb0x/fab/ps/readybot_t.jpg" width="500" height="375" border="1"></a></p>
+      <p align="center"><a href="../../../images/x0xb0x/fab/ps/readytop.jpg"><img src="../../../images/x0xb0x/fab/ps/readytop_t.jpg" width="500" height="375" border="1"></a></p></td>
+    <td valign="top">Place the PCB in a vise or PCB holder</td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/jackplace.jpg"><img src="../../../images/x0xb0x/fab/ps/jackplace_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">The first step is to place the 2.1mm Power Jack as shown </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/jacktack.jpg"><img src="../../../images/x0xb0x/fab/ps/jacktack_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">You can solder one pin from above, which will keep the jack in place when you turn the PCB over </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p align="center"><a href="../../../images/x0xb0x/fab/ps/jacksolder.jpg"><img src="../../../images/x0xb0x/fab/ps/jacksolder_t.jpg" width="500" height="375" border="1"></a></p>
+      <p align="center"><a href="../../../images/x0xb0x/fab/ps/jacksoldered.jpg"><img src="../../../images/x0xb0x/fab/ps/jacksoldered_t.jpg" width="500" height="375" border="1"></a></p></td>
+    <td valign="top">Turn over the PCB, solder the three pins using plenty of solder to fill in the holes as much as possible. </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><img src="../../../images/x0xb0x/fab/ps/jackmeasure_t.jpg" width="500" height="375"></td>
+    <td valign="top"><p>Insert the 9VAC power plug and use your mulitmeter to measure the voltage across the jack. Make sure its at least 10VAC. </p>
+      <p><strong>All tests on the x0xb0x must be done with the power plugged in </strong>(unless otherwise noted)</p>
+      <p>When you are done, remove the power plug. <strong>Never solder with the power plug in! </strong></p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/rectplace.jpg"><img src="../../../images/x0xb0x/fab/ps/rectplace_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top"><p>Turn the PCB over and place the 4 1N4001 diodes <strong>D40</strong>, <strong>D41</strong>, <strong>D42</strong>, and <strong>D43</strong></p>
+      <p>Diodes are directional, make sure the white stripe at the end of each diode matches the stripe in the picture underneath.</p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p align="center"><a href="../../../images/x0xb0x/fab/ps/rectsolder.jpg"><img src="../../../images/x0xb0x/fab/ps/rectsolder_t.jpg" width="500" height="372" border="1"></a></p>
+      <p align="center"><a href="../../../images/x0xb0x/fab/ps/rectsoldered.jpg"><img src="../../../images/x0xb0x/fab/ps/rectsoldered_t.jpg" width="500" height="375" border="1"></a></p>
+      <p>&nbsp;</p></td>
+    <td valign="top">Solder the diodes in place. </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p align="center"><a href="../../../images/x0xb0x/fab/ps/rectclip_t.jpg"><img src="../../../images/x0xb0x/fab/ps/rectclip_t.jpg" width="500" height="365" border="1"></a></p>
+      </td>
+    <td valign="top">Then use the diagonal cutters to clip off the long leads. </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/bigcapplace.jpg"><img src="../../../images/x0xb0x/fab/ps/bigcapplace_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Next, place the two 2200uF capacitors <strong>C3 </strong>and <strong>C5</strong>. Make sure they are placed correctly, with the negative stripes as shown </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center">
+      <p><a href="../../../images/x0xb0x/fab/ps/bigcapsolder.jpg"><img src="../../../images/x0xb0x/fab/ps/bigcapsolder_t.jpg" width="500" height="341" border="1"></a></p>
+      <p><a href="../../../images/x0xb0x/fab/ps/bigcapsolder2.jpg"><img src="../../../images/x0xb0x/fab/ps/bigcapsolder2_t.jpg" width="500" height="375" border="1"></a></p>
+    </div></td>
+    <td valign="top">Solder in the capacitors </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/bigcapclip.jpg"><img src="../../../images/x0xb0x/fab/ps/bigcapclip_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Clip the long leads </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p align="center"><a href="../../../images/x0xb0x/fab/ps/bigcapmeasure.jpg"><img src="../../../images/x0xb0x/fab/ps/bigcapmeasure_t.jpg" width="500" height="375" border="1"></a></p>
+      <p align="center"><a href="../../../images/x0xb0x/fab/ps/bigcapmeasure2.jpg"><img src="../../../images/x0xb0x/fab/ps/bigcapmeasure2_t.jpg" width="500" height="375" border="1"></a></p></td>
+    <td valign="top"><p>Try measuring AC voltage across <strong>C3</strong> and <strong>C5</strong>, it should be about 26VAC.</p>
+      <p>Sometimes you can't read the AC voltage across the capacitors, in which case you should try to measure the DC voltage across both capacitors, they should be  about 15V DC or higher.</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/7805place.jpg"><img src="../../../images/x0xb0x/fab/ps/7805place_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top"><p>Place the 7805 5V regulator <strong>IC20</strong>. Bend it back as shown, this will allow you to put the heatsink on later. Make sure you put the regulator in the right way!</p>
+      <p>Also place <strong>C4</strong> and <strong>C6</strong> the 0.1uF capacitors. The capacitors are non-directional and can be put it either way. </p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p><img src="../../../images/x0xb0x/fab/ps/7805solder_t.jpg" width="500" height="375"></p>
+      <p align="center"><a href="../../../images/x0xb0x/fab/ps/7805soldered.jpg"><img src="../../../images/x0xb0x/fab/ps/7805soldered_t.jpg" width="500" height="375" border="1"></a></p>
+      <p>&nbsp;</p></td>
+    <td valign="top">Solder and clip the regulator and two small capacitors </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/7805measure.jpg"><img src="../../../images/x0xb0x/fab/ps/7805measure_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Insert the power plug and measure the DC voltage from the metal back of the 7805 (which is tied to <strong>ground</strong>) and the left-most pin, as shown. The output voltage should be about 5VDC. If it's less than 4.75VDC or higher than 5.25VDC then check to make sure you have assembled everything correctly.</td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/7806place.jpg"><img src="../../../images/x0xb0x/fab/ps/7806place_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top"><p>Place the 7806 6V regulator <strong>IC21</strong> and the 2 remaining 0.1uF ceramic capacitors <strong>C1</strong> and <strong>C2</strong></p>
+      <p>Make sure you put IC21 in the right way, the curve of the package should match the curve in the image below it. The capacitors are non-directional and can be put it either way. </p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/7806solder.jpg"><img src="../../../images/x0xb0x/fab/ps/7806solder_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Solder and clip the parts </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/7806measure.jpg"><img src="../../../images/x0xb0x/fab/ps/7806measure_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Measure the voltage across <strong>C1</strong> it should be about 6VDC - between 5.75 and 6.25 is OK. </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/53place.jpg"><img src="../../../images/x0xb0x/fab/ps/53place_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top"><p>Next up, place the 4 1N4148 diodes <strong>D44, D45, D46</strong>, and <strong>D47</strong> as well as the 2K trimpot <strong>TM6</strong>, <strong>R2</strong> <strong>R3</strong>, <strong>R4</strong>, <strong>R5, C7</strong> and <strong>IC22</strong> </p>
+      <p>Make sure the diode stripes are facing the right way, that the resistors are correct, the trimpot is 2K (202) and that <strong>IC22</strong> is placed correctly</p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><p align="center"><a href="../../../images/x0xb0x/fab/ps/53solder.jpg"><img src="../../../images/x0xb0x/fab/ps/53solder_t.jpg" width="500" height="364" border="1"></a></p>
+      <p align="center"><a href="../../../images/x0xb0x/fab/ps/53soldered.jpg"><img src="../../../images/x0xb0x/fab/ps/53soldered_t.jpg" width="500" height="362" border="1"></a></p></td>
+    <td valign="top">Flip over the PCB and solder in all the parts, then clip the leads </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/trimadjust.jpg"><img src="../../../images/x0xb0x/fab/ps/trimadjust_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">The trimpot is used to adjust the 5.333V reference voltage which is used by the VCO to create notes. Use a thin screwdriver to gently turn the potentiometer. Do not be rough with it, or try to force it past its hard limit. </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center">
+      <p><a href="../../../images/x0xb0x/fab/ps/53adjustmin.jpg"><img src="../../../images/x0xb0x/fab/ps/53adjustmin_t.jpg" width="500" height="375" border="1"></a></p>
+      <p><a href="../../../images/x0xb0x/fab/ps/53adjustmid.jpg"><img src="../../../images/x0xb0x/fab/ps/53adjustmid_t.jpg" width="500" height="375" border="1"></a></p>
+      <p><a href="../../../images/x0xb0x/fab/ps/53adjustmax.jpg"><img src="../../../images/x0xb0x/fab/ps/53adjustmax_t.jpg" width="500" height="375" border="1"></a></p>
+    </div></td>
+    <td valign="top"><p>You should be able to adjust the trimpot so that it ranges from about 5.25 to 5.75VDC. What is most important is that it can be set to less than 5.3V and higher than 5.4V.</p>
+      <p>You can measure the voltage at pin #5 of <strong>IC23</strong> as shown. You can use the heatsink of the 7805 as ground reference.</p>
+      <p>Do not trim the potentiometer to 5.333V yet, just check to make sure the range is there </p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/finalplace.jpg"><img src="../../../images/x0xb0x/fab/ps/finalplace_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top"><p>Place the remaining parts: <strong>IC23</strong> (AN6562 op-amp), <strong>R1</strong>, <strong>C8</strong>, <strong>C60</strong>, <strong>C61, </strong><strong>R178 </strong>and <strong>R179 </strong></p>
+      <p>Make sure the opamp is placed properly. The notch in the chip should match the notch in the silkscreened image. If you are nervous about soldering in ICs, you may want to buy sockets for the chips. </p></td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/finalsolder.jpg"><img src="../../../images/x0xb0x/fab/ps/finalsolder_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Solder in all of the parts and clip the leads </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/53test.jpg"><img src="../../../images/x0xb0x/fab/ps/53test_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Now you can tune the 5.333V reference, measuring the voltage on <strong>J4 </strong> as shown </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/12vtest.jpg"><img src="../../../images/x0xb0x/fab/ps/12vtest_t.jpg" width="500" height="375" border="1"></a></div></td>
+    <td valign="top">Finally, test the +12V supply as shown using your multimeter. The voltage should be between 11.75V and 12.25V </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/wires.jpg"><img src="../../../images/x0xb0x/fab/ps/wires_t.jpg" width="500" height="415" border="1"></a></div></td>
+    <td valign="top">Cut 3 wires, at least 6&quot; long, strip the ends and tin them. The two side colors don't matter but make sure one is black, it will make it easy to remember that the middle pin or <strong>J4 </strong>is ground. </td>
+  </tr>
+  <tr>
+    <td class="imagetd"><div align="center"><a href="../../../images/x0xb0x/fab/ps/done.jpg"><img src="../../../images/x0xb0x/fab/ps/done_t.jpg" width="500" height="290" border="1"></a></div></td>
+    <td valign="top">Solder the wires into <strong>J4</strong> with the black wire in the middle </td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Trouble shooting <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+<p>Doesn't work? Try out the suggestions before posting on the forum</p>
+<ol>
+  <li><strong>Is it plugged in?<br>
+    </strong>Remember, you can't test voltage without power</li>
+  <li> <strong>
+      Are you using the right kind of adaptor?<br>
+    </strong>x0xb0x needs a 9VAC adaptor, not a 9VDC adaptor. It will <em>not</em> work with a DC adaptor! See the preparatory steps for instructions on how to verify that it is a 9V AC adaptor </li>
+  <li><strong>Are you measuring the voltages (AC or DC) correctly with the multimeter<br>
+  </strong>Multimeters are all very similar in practice, but have different interfaces. Make sure you are measuring voltage correctly. Unless otherwise mentioned, the voltages are taken with respect to ground (the middle pin of J4, or the heatsink of the 7805 for example) <a href="../../../learn/multimeter/index.html">Here is a tutorial on how to use a multimeter
+  </a>
+  <div class="blip_description style1"></div>
+  </li>
+  <li><strong>Are the electrolytic (blue cylindrical) capacitors in backward? </strong><br>
+    Check that they look like the images above, putting them in backwards will create a short. </li>
+  <li><strong>Are the resistors the correct values?</strong><br>
+    Check them again, and in good light. If you want to measure the resistance with a multimeter they cannot be in the circuit: you will not get the correct reading while they are soldered it.</li>
+  <li><strong>Go through all of the tests starting from the beginning</strong>. <br>
+    Always go back and verify your previous readings: test the jack voltage, then the voltage across <strong>C3</strong> and <strong>C5</strong>, etc. </li>
+  </ol>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/fab/powersupply.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 17:55:27 GMT -->
+</html>

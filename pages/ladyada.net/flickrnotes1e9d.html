@@ -1,0 +1,34 @@
+
+
+
+var _style = '<style>';
+//_style += '.photo_box {margin:0px;padding:5px;border:1px solid #ccddee;width:505px;font-family:Arial,Helvetica,sans-serif;font-size:11px;background:#ddd;}';
+_style += '.photo_notes {position:absolute;margin:0px;padding:0px;border:0px solid #cc0000; z-index:200; visibility:visible;}';
+_style += '.previewbox_div {position:absolute; border:3px solid white;}';
+_style += '.photo_note {position:absolute;  border-padding:0px; margin:0px; padding:0px;}';
+_style += '.photo_note_box_div {position:absolute; border:0px solid #d4d82d;}';
+_style += '.photo_note_box_inner_div {border:1px solid black; }';
+_style += '.photo_note_box_inner_inner_div {border:0px solid white;}';
+_style += '</style>';
+
+var _IE4=(document.all);
+var _notes = new Array();
+
+//
+document.write(_style);
+document.write('<div class="photo_box">');
+document.write('<div id="photo_notes_388600413" class="photo_notes"><div id="notes_text_div"></div>');
+document.write('');
+document.write('</div>');
+document.write('<div id="photoImgDiv388600413" style="display:inline;padding:1px;" class="photoImgDiv" onMouseOver="showNoteBox388600413()" onMouseOut="hideNotes388600413()"><a target="_blank" href="http://www.flickr.com/photo_zoom.gne?id=388600413&amp;size=l"><img src="../static.flickr.com/388600413_.html" border="1" GALLERYIMG="no" /></a><br></div>');
+document.write('</div>');
+document.getElementById('photo_notes_388600413').style.visibility = 'hidden';
+
+function hideNotes388600413() {
+    document.getElementById('photo_notes_388600413').style.visibility = 'visible';
+    }
+function showNoteBox388600413() {
+    document.getElementById('photo_notes_388600413').style.visibility = 'visible';
+  }
+
+hideNotes388600413();

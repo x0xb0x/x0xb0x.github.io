@@ -1,0 +1,231 @@
+---
+layout: make
+title: Envelope
+---
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->You 
+            are here<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <div align="center"><a href="http://www.flickr.com/photos/ladyada/388602131"><img src="http://static.flickr.com/123/388602131_b8a9ae559f.jpg" width=500 height=334></a></div>
+       
+		  <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Testing<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p>The only thing that can really be tested is the gating circuit. </p>
+            <p><strong>Make sure the microcontroller is not in place while you do this test, otherwise you can destroy it! (This would happen if you built the whole thing and are testing this section now)</strong></p>
+<ol>
+              <li>Power up the main board by connecting <strong>J4</strong> as before. </li>
+              <li>Clip one end of an alligator clip to the south side of <strong>R146</strong> (gate).<br>
+              <a href="http://www.flickr.com/photos/ladyada/388814810"><img src="http://static.flickr.com/62/388814810_6db2f59955.jpg" width=500 height=333></a></li>
+              <li>Connect the other end to the exposed side of <strong>R3</strong> on the IO board 
+                (which provides +5V)<br>
+              <a href="http://www.flickr.com/photos/ladyada/388814838"><img src="http://static.flickr.com/158/388814838_5a62995aa2.jpg" width=500 height=442></a> </li>
+              <li>Check the voltage at the north side of where <strong>D35</strong> goes, using a scope or meter. When the clip is connected, there 
+                should be 12V. When its not connected, there should be 0V.<br>
+             <a href="http://www.flickr.com/photos/ladyada/388603751"><img src="http://static.flickr.com/136/388603751_666abc1fcf.jpg" width=500 height=298></a></li>
+              <li>Check the voltage at the top of where<strong> D36 </strong>goes . When the clip from <strong>R146</strong> is disconnected 
+                and touched to <strong>R3</strong> again, there should be a brief pulse to 12V, if your meter has a 'max hold' setting, you can use this to see whether there is a pulse.  (The picture shows testing after the VCA has been installed, but just ignore that) <br>
+              </li>
+            </ol>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Parts<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p>&nbsp;</p>
+            <table class="BOM">
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1n4148.jpg"><img src="../../../../../../assets/images/parts/1n4148_t.jpg" width="250" height="69" border="0"></a></div></td>
+                <td>1N4148</td>
+                <td><div align="center">5</div></td>
+                <td><p>D26, D28, D29, D34, D37 </p></td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>22 ohm 5% resistor </td>
+                <td>1</td>
+                <td>R150</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>100 ohm 5% resistor </td>
+                <td>1</td>
+                <td>R152</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>1K 5% resistor </td>
+                <td>1</td>
+                <td>R137</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>10K 5% resistor</td>
+                <td>6</td>
+                <td>R142, R143, R144, R145, R148, R149 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>22K 5% resistor </td>
+                <td>3</td>
+                <td>R117, R146, R151 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlue_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGray_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>68K 5% resistor</td>
+                <td>1</td>
+                <td>R138</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>100K 5% resistor </td>
+                <td>3</td>
+                <td>R139, R140, R141 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1M-A.jpg"><img src="../../../../../../assets/images/parts/1M-A_t.jpg" width="136" height="200" border="0"></a></div></td>
+                <td>1Meg A (log) dual potentiometer </td>
+                <td>1</td>
+                <td>VR6</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/473poly.jpg"><img src="../../../../../../assets/images/parts/473poly_t.jpg" width="200" height="94" border="0"></a></div></td>
+                <td>.047uF (2A473K) capacitor </td>
+                <td>1</td>
+                <td>C54</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1uFtant.jpg"><img src="../../../../../../assets/images/parts/1uFtant_t.jpg" width="149" height="200" border="0"></a></div></td>
+                <td>1uF tantalum capacitor </td>
+                <td>1</td>
+                <td>C62</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/10uf.jpg"><img src="../../../../../../assets/images/parts/10uf_t.jpg" width="250" height="86" border="0"></a></div></td>
+                <td>10uF electrolytic capacitor </td>
+                <td>1</td>
+                <td>C72</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/47uf.jpg"><img src="../../../../../../assets/images/parts/47uf_t.jpg" width="200" height="90" border="0"></a></div></td>
+                <td>47uF electrolytic capacitor</td>
+                <td>1</td>
+                <td>C55</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2SA733.jpg"><img src="../../../../../../assets/images/parts/2SA733_t.jpg" width="68" height="200" border="0"></a></div></td>
+                <td>2SA733P, TO-92 PNP transistor </td>
+                <td>2</td>
+                <td>Q36, Q38 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2sc536.jpg"><img src="../../../../../../assets/images/parts/2sc536_t.jpg" width="144" height="250" border="0"></a></div></td>
+                <td>2SC536F, TO-92 NPN transistor </td>
+                <td>4</td>
+                <td>Q35, Q37, Q40, Q41 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2SK30AY.jpg"><img src="../../../../../../assets/images/parts/2SK30AY_t.jpg" width="111" height="200" border="0"></a></div></td>
+                <td>2SK30 JFET, must be 2SK30AY</td>
+                <td>1</td>
+                <td>Q39</td>
+              </tr>
+            </table>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>

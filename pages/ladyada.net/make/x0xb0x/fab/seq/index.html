@@ -1,0 +1,319 @@
+---
+layout: make
+title: Sequencer
+---
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+		    <p>The sequencer is pretty much all of the digital control and I/O. 
+              There are a lot of parts but not many kinds of parts (70 10K resistors, 
+              40 LEDs, 32 buttons, etc.)</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->You 
+            are here<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p align="center"><a href="http://www.flickr.com/photos/ladyada/388601651"><img src="http://static.flickr.com/131/388601651_433b3637b4.jpg" width=500 height=361></a><br>
+              <em>Before, bottom of mainboard</em></p>
+            <p align="center"><a href="http://www.flickr.com/photos/ladyada/388601506"><img src="http://static.flickr.com/124/388601506_823683bd42.jpg" width=500 height=356></a><br>
+              <em>Before, top of mainboard</em></p>
+            <p align="center"><a href="http://www.flickr.com/photos/ladyada/388601027"><img src="http://static.flickr.com/156/388601027_2fd4d0b96c.jpg" width=500 height=363></a><br>
+              <em>After, bottom of mainboard</em></p>
+            <p align="center"><a href="http://www.flickr.com/photos/ladyada/388602543"><img src="http://static.flickr.com/153/388602543_3cee251204.jpg" width=500 height=317></a><br>
+              <em>After, top of mainboard</em></p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Swapping LEDs <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+<p>If you want to use non-standard LEDs (the standard ones are rounded bright red) then you probably want to change the resistor values. See this post on the forum for the <a href="http://www.ladyada.net/forums/viewtopic.php?t=2988">resistor and corresponding LED</a> list (copied below). If you use the flat LEDs you'll want to replace each of those with a 1K resistor instead of a 10K resistor. </p>
+<p><span class="postbody"><span style="color: darkred;"><span style="font-size: 24px; line-height: normal;">LED-RESISTOR:</span></span> <br>
+      1-234 <br>
+      2-237 <br>
+      3-241 <br>
+      4-242 <br>
+      5-243 <br>
+      6-244 <br>
+      7-250 <br>
+      8-251 <br>
+      9-252 <br>
+      10-253 <br>
+      11-256 <br>
+      12-260 <br>
+      13-261 <br>
+      14-262 <br>
+      15-266 <br>
+      16-267 <br>
+      17-268 <br>
+      18-238 <br>
+      19-239 <br>
+      20-245 <br>
+      21-246 <br>
+      22-248 <br>
+      23-249 <br>
+      24-258 <br>
+      25-265 <br>
+      26-264 <br>
+      27-203 <br>
+      28-229 <br>
+      29-228 <br>
+      30-227 <br>
+      31-223 <br>
+      32-222 <br>
+      33-221 <br>
+      34-217 <br>
+      35-215 <br>
+      36-213 <br>
+      37-211 <br>
+      38-208 <br>
+      39-205 <br>
+      40-204 </span></p>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->LED standoff tips! <!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+<p>The LEDs use standoffs, dont worry about which way the standoffs go, they're just pieces of plastic.</p>
+<p>If you are using the standard LEDs, they're not so bad to line up, so you can use this technique:</p>
+<p><a href="http://www.flickr.com/photos/ladyada/388604057"><img src="http://static.flickr.com/132/388604057_f1822334e1.jpg" width=500 height=405></a><br>
+To get the LEDs seated best, use something like a screwdriver to kink the leads (twist firmly between both leads) while pressing down on the LED into the board. </p>
+<p>If you have the flat LEDs, you cant use the above technique: it will end in tears. The best trick I've got so far is to put the LEDs in the proper locations, then attach the top cover to the main PCB using the standoffs and top half of the enclosure. Basically you want to make sure the LEDs are flush when you're done. </p>
+<p>Hold the PCB upside down, so you can jiggle each LED till they slide into the holes of the cover. Now they are lined up.</p>
+<p>Next, for each LED, while its though the hole in the panel, solder one leg. Hold the tip of the soldering iron to the soldered leg and with your free hand, push the LED up through the panel hole all the way until its flush. Release the iron from the solder. Wait 3 seconds until the solder is 'set'. Now the LED is tacked in the proper position. Solder the other leg. Clip the LEDs. Repeat 39 more times! </p>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Notes<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p>Make sure you dont confuse the two types of serial/parallel converter 
+              chips. Also, put in the LEDs correctly or they wont light up: the 
+              flat side of the LED goes with the flat side of the picture</p>
+            <p> The EEPROM and microcontroller are socketed so dont solder them in directly. </p>
+            <p align="left">&nbsp;</p>
+            <p align="left"><img src="../images/seq_switchstrap.jpg" width="422" height="380"></p>
+            <p align="left">Before soldering the 5 pins of the rotary switches, they need to be secured &amp; centered onto their silkscreen outline. Use bare wire 
+              to 'staple' the switches down. After soldering both ends (but before 
+              clipping off the excess), pull on the wire while heating one end 
+              at a time to make a snug fit.</p>
+            <p align="left">Don't forget about the two wire jumpers, <strong>J1</strong> and <strong>J2</strong>! They are seperate from the wires used to hold down the rotary switches above.</p>
+            <p align="left">There are a lot of 10K resistors, LEDs and switches. It might be best to solder them in that order, although you should do whichever is best for your soldering iron and setup. Basically just think about what would be the easiest way to solder so that you dont melt the switches when soldering the other parts. </p>
+    <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Parts<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <table class="BOM">
+              <tr> 
+                <td class="imagetd"><div align="center"><img src="../../../../../../assets/images/parts/40pinsocket_t.jpg" width="278" height="150"></div></td>
+                <td>40-pin DIP socket</td>
+                <td>1</td>
+                <td>IC3*</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/8pinsocket.jpg"><img src="../../../../../../assets/images/parts/8pinsocket_t.jpg" width="173" height="150" border="0"></a></div></td>
+                <td>8-pin DIP socket</td>
+                <td>1</td>
+                <td>IC2*</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/rotenc.jpg"><img src="../../../../../../assets/images/parts/rotenc_t.jpg" width="120" height="146" border="0"></a></div></td>
+                <td>Rotary encoder</td>
+                <td>1</td>
+                <td>S2</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/rotswitch.jpg"><img src="../../../../../../assets/images/parts/rotswitch_t.jpg" width="188" height="250" border="0"></a></div></td>
+                <td>16 position rotary switch</td>
+                <td>2</td>
+                <td>S3, S4 </td>
+              </tr>
+              <tr>
+                <td class="imagetd">&nbsp;</td>
+                <td>Solid gauge wire (jumpers) </td>
+                <td>2</td>
+                <td>J1, J2</td>
+              </tr>
+              <tr> 
+                <td class="imagetd">&nbsp;</td>
+                <td>Solid gauge wire (straps)</td>
+                <td>2</td>
+                <td>S3*, S4*</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><img src="../../../../../../assets/images/parts/tact_t.jpg" width="223" height="150"></div></td>
+                <td>Tact switch</td>
+                <td>23</td>
+                <td>S5-S27</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/clear5mmled.jpg"><img src="../../../../../../assets/images/parts/clear5mmled_t.jpg" width="200" height="85" border="0"></a></div></td>
+                <td>Red 5mm LED</td>
+                <td>40</td>
+                <td>LED1-LED40</td>
+              </tr>
+              <tr>
+                <td class="imagetd"><div align="center"><img src="../../../../../../assets/images/parts/ledstandoff.jpg" width="123" height="110"></div></td>
+                <td>0.22&quot; LED standoff</td>
+                <td>40</td>
+                <td>LED1*-LED40*</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1n4001_t.jpg"><img src="../../../../../../assets/images/parts/1n4148_t.jpg" width="250" height="69" border="0"></a></div></td>
+                <td>1N4148</td>
+                <td>10</td>
+                <td>D1-D10</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>10K 5% resistor</td>
+                <td>68</td>
+                <td>R201-R234, R237-R270. </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table  class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>220K 5% resistor </td>
+                <td>2</td>
+                <td>R235, R236</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGreen_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>1MEG 5% resistor </td>
+                <td>1</td>
+                <td>R200</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/102poly.jpg"><img src="../../../../../../assets/images/parts/102poly_t.jpg" width="200" height="82" border="0"></a></div></td>
+                <td>.001uF (2A102K) capacitor</td>
+                <td>2</td>
+                <td>C100, C101 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/104cerm.jpg"><img src="../../../../../../assets/images/parts/104cerm_t.jpg" width="154" height="200" border="0"></a></div></td>
+                <td>.1uF (104) ceramic</td>
+                <td>10</td>
+                <td>C103, C104, C106-C113</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1uf-elect.jpg"><img src="../../../../../../assets/images/parts/1uf-elect_t.jpg" width="250" height="99" border="0"></a></div></td>
+                <td>1uF electrolytic capacitor </td>
+                <td>1</td>
+                <td>C105</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/100uf-10v.jpg"><img src="../../../../../../assets/images/parts/100uf-10v_t.jpg" width="250" height="81" border="0"></a></div></td>
+                <td>100uF 10V electrolytic capacitor</td>
+                <td>1</td>
+                <td>C102</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/74hc126.jpg"><img src="../../../../../../assets/images/parts/74hc126_t.jpg" width="200" height="107" border="0"></a></div></td>
+                <td>74AC126</td>
+                <td>1</td>
+                <td>IC1</td>
+              </tr>
+              <tr> 
+                <td class="imagetd">&nbsp;</td>
+                <td>74AC165</td>
+                <td>3</td>
+                <td>IC16-IC18</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/74hc595.jpg"><img src="../../../../../../assets/images/parts/74hc595_t.jpg" width="200" height="117" border="0"></a></div></td>
+                <td>74AC595</td>
+                <td>5</td>
+                <td>IC4-IC8</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2sc536.jpg"><img src="../../../../../../assets/images/parts/2sc536_t.jpg" width="144" height="250" border="0"></a></div></td>
+                <td>2SC536F, TO-92 NPN transistor </td>
+                <td>1</td>
+                <td>Q5</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/atmega.jpg"><img src="../../../../../../assets/images/parts/atmega_t.jpg" width="200" height="80" border="0"></a></div></td>
+                <td>ATmega162 microcontroller</td>
+                <td>1</td>
+                <td>IC3</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/eeprom.jpg"><img src="../../../../../../assets/images/parts/eeprom_t.jpg" width="200" height="152" border="0"></a></div></td>
+                <td>25C33 or AT25320 32K EEPROM</td>
+                <td>1</td>
+                <td>IC2</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/xtal16m.jpg"><img src="../../../../../../assets/images/parts/xtal16m_t.jpg" width="164" height="200" border="0"></a></div></td>
+                <td>16MHz ceramic resonator</td>
+                <td>1</td>
+                <td>XTAL1</td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>

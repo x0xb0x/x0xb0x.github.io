@@ -82,7 +82,7 @@ if(o3_allowmove==0){runHook("placeLayer",FREPLACE);(olNs6&&olShowId<0)?olShowId=
 runHook("disp",FAFTER);
 if(statustext!="")self.status=statustext;}
 function createPopup(lyrContent){runHook("createPopup",FBEFORE);
-if(o3_wrap){var wd,ww,theObj=(olNs4?over:over.style);theObj.top=theObj.left=((olIe4&&!olOp)?0:-10000)+(!olNs4?'px':0);layerWrite(lyrContent);wd=(olNs4?over.clip.width:over.offsetWidth);if(wd>(ww=windowWidth())){lyrContent=lyrContent.replace(/\ /g,' ');o3_width=ww;o3_wrap=0;}}
+if(o3_wrap){var wd,ww,theObj=(olNs4?over:over.style);theObj.top=theObj.left=((olIe4&&!olOp)?0:-10000)+(!olNs4?'px':0);layerWrite(lyrContent);wd=(olNs4?over.clip.width:over.offsetWidth);if(wd>(ww=windowWidth())){lyrContent=lyrContent.replace(/\ï¿½/g,' ');o3_width=ww;o3_wrap=0;}}
 layerWrite(lyrContent);
 if(o3_wrap)o3_width=(olNs4?over.clip.width:over.offsetWidth);
 runHook("createPopup",FAFTER,lyrContent);
@@ -174,7 +174,7 @@ if(ar[i]==CLOSEFONTCLASS){eval(pf+'closefontclass="'+ar[++i]+'"');continue;}
 i=parseCmdLine(pf,i,ar);}}
 if(fnMark&&o3_function)o3_text=o3_function();
 if((pf=='o3_')&&o3_wrap){o3_width=0;
-var tReg=/<.*\n*>/ig;if(!tReg.test(o3_text))o3_text=o3_text.replace(/[ ]+/g,' ');if(!tReg.test(o3_cap))o3_cap=o3_cap.replace(/[ ]+/g,' ');}
+var tReg=/<.*\n*>/ig;if(!tReg.test(o3_text))o3_text=o3_text.replace(/[ ]+/g,'ï¿½');if(!tReg.test(o3_cap))o3_cap=o3_cap.replace(/[ ]+/g,'ï¿½');}
 if((pf=='o3_')&&o3_sticky){if(!o3_close&&(o3_frame!=ol_frame))o3_close=ol_close;if(o3_mouseoff&&(o3_frame==ol_frame))opt_NOCLOSE(' ');}}
 function layerWrite(txt){txt+="\n";if(olNs4){var lyr=o3_frame.document.layers['overDiv'].document
 lyr.write(txt)
@@ -208,7 +208,7 @@ for(k=i;k<args.length;k++){if(typeof args[k]=='number'&&args[k]>pmStart)break;st
 if(str)str=str.substring(0,--str.length);
 k--;pV=(olNs4&&/cellpad/i.test(parameter))?str.split(',')[0]:str;eval(parameter+'="'+pV+'"');
 return k;}
-function nbspCleanup(){if(o3_wrap){o3_text=o3_text.replace(/\ /g,' ');o3_cap=o3_cap.replace(/\ /g,' ');}}
+function nbspCleanup(){if(o3_wrap){o3_text=o3_text.replace(/\ï¿½/g,' ');o3_cap=o3_cap.replace(/\ï¿½/g,' ');}}
 function escSglQuote(str){return str.toString().replace(/'/g,"\\'");}
 function OLonLoad_handler(e){var re=/\w+\(.*\)[;\s]+/g,olre=/overlib\(|nd\(|cClick\(/,fn,l,i;
 if(!olLoaded)olLoaded=1;

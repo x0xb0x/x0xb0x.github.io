@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+    <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+
+    <!-- InstanceBeginEditable name="badge" -->
+    <div class="topheader" ><img src="/assets/images/wavebubble/topheaderbadge.png" width="171" height="190"></div>
+    <!-- InstanceEndEditable -->
+    <span class="topheadertext"><!-- InstanceBeginEditable name="heading" -->x0xb0x<!-- InstanceEndEditable --></span>
+    <span class="topsubheadertext"><!-- InstanceBeginEditable name="Subheading" -->User Manual: Developing firmware <!-- InstanceEndEditable --></span>
+
+    <ul id="menu">
+        <li class="first"></li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/index.html">About</a></div> </li>
+        <li> <div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/FAQ.html">F.A.Q.</a></div> </li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/samples.html">Samples</a></div> </li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/gallery.html">Gallery</a></div> </li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/mods.html">Mods</a></div> </li>
+        <li> <div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/index.html">Make it! </a></div>
+        <ul>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/parts.html">Parts</a></div></li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/tools.html">Tools</a></div></li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/prep/index.html">Preparation</a></div></li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/powersupply.html">Power</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/vco.html">VCO</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/vcf/index.html">VCF</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/env/index.html">Envelope</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/vca/index.html">VCA</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/hp-mix/index.html">Headphone</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/ioboard/index.html">I/O Board</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/seq/index.html">Sequencer</a></div> </li>
+            <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/fab/finish/index.html">Finishing</a></div> </li>
+        </ul>
+        </li>
+
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/manual/index.html">Use it! </a></div></li>
+        <li><div class="menuitemtext"><a href="http://sourceforge.net/projects/x0xb0x/">Firmware</a></div></li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/software/index.html">Software</a></div> </li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/download.html">Download</a></div> </li>
+        <li><div class="menuitemtext"><a href="/pages/ladyada.net/make/x0xb0x/resc.html">Resources</a></div> </li>
+        <li><div class="menuitemtext"><a href="http://forums.ladyada.net/" target="_blank">Forums</a></div></li>
+        <li> <div class="menuitemtext"><a href="http://www.ladyada.net/wiki/x0x:x0xd0x">Wiki</a></div> </li>
+        <li class="last"></li>
+    </ul>
+
+    <div id="lefttcol">
+        <!-- this is just a buffer -->
+    </div>
+
+
+    <div class="page-content">
+      <div class="body-wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

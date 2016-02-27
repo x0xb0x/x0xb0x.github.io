@@ -1,0 +1,303 @@
+---
+layout: make
+title: Voltage Controlled Filter
+---
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+
+            <p>The VCF creates the high-frequency sub-oscillations, as controlled by the cutoff and resonance knobs. </p>
+
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->You 
+            are here<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <div align="center"><a href="http://www.flickr.com/photos/ladyada/388602265"><img src="http://static.flickr.com/154/388602265_83a1ba1f25.jpg" width=500 height=304></a><br>
+              After (<em>Oops! C23 is 'upside down' in this picture.</em>)</div>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Notes<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>Again, solder in the large potentiometers last.</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Testing<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p>At this point one can test whether resonance/cutoff 
+              affect the note.</p>
+            <ol>
+              <li> 
+                <div align="left">Power up as described in the power supply section, 
+                  connect 3VDC (using a power supply or some other method as discussed in the prep section) to <strong>R90</strong>. (See below, the red hook-clip.)<br>
+         <a href="http://www.flickr.com/photos/ladyada/388602753"><img src="http://static.flickr.com/187/388602753_c7c1dfe7c2.jpg" width=500 height=435></a></div>
+              </li>
+              <li>If you have one, use a scope to probe the potentiometer, twist the cutoff (<strong>VR3</strong>) and resonance (<strong>VR4</strong>)
+                pots all the way down and examine the almost sinusoidal notes.<br>
+              <a href="http://www.flickr.com/photos/ladyada/388604522"><img src="http://static.flickr.com/175/388604522_d6b2d17ca1.jpg" width=500 height=396></a></li>
+              <li>Or twist them all the way up and note the high frequencies.<br>
+               <a href="http://www.flickr.com/photos/ladyada/388604293"><img src="http://static.flickr.com/138/388604293_e6f6ff242b.jpg" width=500 height=396></a>
+              </li>
+              <li>Or, lacking a scope, use a high-impedance (32ohm) headphone to probe the same pin. 
+                Connect the sleeve to ground and use the tip to touch the point 
+                you want to hear. Make sure that its a pair of really cheap headphones: high quality ones are as low as 2ohms and will pull the signal low. Sinusoudal notes will sound &quot;soft&quot; whereas the high resonance notes are 'acidic.'<br>
+            <a href="http://www.flickr.com/photos/ladyada/388599528"><img src="http://static.flickr.com/176/388599528_d3668d7489.jpg" width=500 height=323></a></li>
+            </ol>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Tuning<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>There is an 'official' tuning for the VCF. According to the Roland TB-303 manual, when playing <em>C1</em> (65.4Hz) with the cutoff frequency knob set to 50%, saw waveform, and resonance knob at 100%, the resonance frequency should be 500Hz (give or take 100Hz depending on how it sounds to you). You can perform this tuning by either applying 3.0VDC to the VCO or finishing the entire assembly and using something like Keyboard mode to trigger the note. The cutoff can be adjusted by tweaking <strong>TM3</strong>.</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Parts<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <table class="BOM">
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1n4001_t.jpg"><img src="../../../../../../assets/images/parts/1n4148_t.jpg" width="250" height="69" border="0"></a></div></td>
+                <td>1N4148</td>
+                <td>1</td>
+                <td>D24</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>100 ohm 5% resistor </td>
+                <td>1</td>
+                <td>R95</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>2.2K 5% resistor</td>
+                <td>7</td>
+                <td>R67, R68, R69, R70, R71, R98, R108 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>10K 5% resistor</td>
+                <td>11</td>
+                <td>R47, R61, R64, R65, R94, R96, R97, R109, R112, R115, R116 
+                </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>22K 5% resistor </td>
+                <td>2</td>
+                <td>R110, R111 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rViolet_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>47K 5% resistor</td>
+                <td>1</td>
+                <td>R46</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>100K 5% resistor </td>
+                <td>6</td>
+                <td>R66, R72, R73, R99, R113, R114 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>220K 5% resistor </td>
+                <td>2</td>
+                <td>R62, R63 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/trim.jpg"><img src="../../../../../../assets/images/parts/trim_t.jpg" width="130" height="129" border="0"></a></div></td>
+                <td>500K (504) trim potentiometer</td>
+                <td>1</td>
+                <td>TM3</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/50Kpot.jpg"><img src="../../../../../../assets/images/parts/50Kpot_t.jpg" width="192" height="250" border="0"></a></div></td>
+                <td>50K D (log) potentiometer </td>
+                <td>2</td>
+                <td>VR3, VR5 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/50K-B.jpg"><img src="../../../../../../assets/images/parts/50K-B_t.jpg" width="125" height="200" border="0"></a></div></td>
+                <td>50K B (linear) dual potentiometer</td>
+                <td>1</td>
+                <td>VR4</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/018ufpoly.jpg"><img src="../../../../../../assets/images/parts/018ufpoly_t.jpg" width="102" height="200" border="0"></a></div></td>
+                <td>.018uF (2A183K) polyester capacitor </td>
+                <td>1</td>
+                <td>C18</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/033poly.jpg"><img src="../../../../../../assets/images/parts/033poly_t.jpg" width="137" height="200" border="0"></a></div></td>
+                <td>.033uF (2A333K) polyester capacitor </td>
+                <td>3</td>
+                <td>C19, C24, C26 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/104poly.jpg"><img src="../../../../../../assets/images/parts/104poly_t.jpg" width="200" height="91" border="0"></a></div></td>
+                <td>.1uF (2A104K) capacitor </td>
+                <td>2</td>
+                <td>C25, C27</td>
+              </tr>
+              <tr>
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/10uf.jpg"><img src="../../../../../../assets/images/parts/10uf_t.jpg" width="250" height="86" border="0"></a></div></td>
+                <td>10uF electrolytic capacitor</td>
+                <td>2</td>
+                <td>C16, C30</td>
+              </tr>
+              <tr>
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/47uf.jpg"><img src="../../../../../../assets/images/parts/47uf_t.jpg" width="200" height="90" border="0"></a></div></td>
+                <td>47uF electrolytic capacitor</td>
+                <td>1</td>
+                <td>C28</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1uf-elect.jpg"><img src="../../../../../../assets/images/parts/1uf-elect_t.jpg" width="250" height="99" border="0"></a></div></td>
+                <td>1uF electrolytic capacitor </td>
+                <td>7</td>
+                <td>C13, C14, C15, C17, C22, C23, C29</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2SA733.jpg"><img src="../../../../../../assets/images/parts/2SA733_t.jpg" width="68" height="200" border="0"></a></div></td>
+                <td>2SA733P, TO-92 PNP transistor </td>
+                <td>2</td>
+                <td>Q9, Q10 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2sc536.jpg"><img src="../../../../../../assets/images/parts/2sc536_t.jpg" width="144" height="250" border="0"></a></div></td>
+                <td>2SC536F, TO-92 NPN transistor </td>
+                <td>10</td>
+                <td>Q11, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q23</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2SC2291.jpg"><img src="../../../../../../assets/images/parts/2SC2291_t.jpg" width="147" height="200" border="0"></a></div></td>
+                <td>2SC2291 5-SIP matched pair with common base </td>
+                <td>1</td>
+                <td>Q22</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2SC1583.jpg"><img src="../../../../../../assets/images/parts/2SC1583_t.jpg" width="118" height="200" border="0"></a></div></td>
+                <td>2SC1583 5-SIP matched pair with common emitter</td>
+                <td>2</td>
+                <td>Q12, Q21 </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/fab/vcf/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:00:18 GMT -->
+</html>

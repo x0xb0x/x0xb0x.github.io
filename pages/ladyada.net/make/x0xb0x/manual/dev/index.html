@@ -1,0 +1,47 @@
+
+
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>You may eventually decide that you want to write firmware modifications for the x0xb0x. Since x0xb0x is an open source platform and the code is written using free tools in a well known language, its pretty easy to get started with writing new code. </p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Installing Dev Tools<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+            <p>The AVR microcontroller has a wide variety of development tools available. Almost all are discuss/reviewed/available from <a href="http://www.avrfreaks.com/">AVRfreaks</a>, the de facto website for AVR information. This is how I set up development for AVR.</p>
+            <strong>Windows:</strong>
+            <ol>
+              <li>Download the latest distribution of <a href="http://winavr.sourceforge.net/">WinAVR</a> from <a href="http://sourceforge.net/projects/winavr/">sourceforge</a> &amp; install it! (The <a href="http://winavr.sourceforge.net/">install document available</a> is pretty good, I suggest you read it) </li>
+              <li>Download the latest x0xb0x firmware source code distribution &amp; unzip the archive into wherever you intend to write code.</li>
+              <li>Open up a command window, and go to the development directory and run <strong>make</strong></li>
+              <li>If the computer cant find &quot;make,&quot; check if the environment variable PATH contains the correct directories (read <strong>C:/WinAVR/WinAVR-user-manual.htm</strong>l or wherever you installed WinAVR)</li>
+              <li>There should be a lot of stuff happening now. Eventually it will stop and there will be a file created called 'x0xb0x.hex' which you can then <a href="../bootloading/index.html">upload into your synth via the bootloading mechanism</a>.</li>
+              <li>Now write some code! If you add new files, be sure to change the Makefile to include them in the build.</li>
+            </ol>
+		  <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/manual/dev/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:03:56 GMT -->
+</html>

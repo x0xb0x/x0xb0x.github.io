@@ -1,0 +1,396 @@
+---
+layout: make
+title: IO board
+---
+<div id="content">
+  <!-- InstanceBeginRepeat name="texts" --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Introduction<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" -->
+<p>In this 
+            section, the entire IO board is soldered together and the USB is tested. 
+            Be sure to follow the instructions for how to solder in the surface 
+            mount USB chip.</p>
+<p><em>Note</em>: in batch #6 we've started to notice that the optoisolators are possibly made to a different specification. If MIDI out and MIDI thru are working but MIDI in is not, try upping R16 to 120 or 150 ohms! </p>
+<!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->You 
+            are here<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p align="center"><a href="../images/ioboard_done.jpg"><img src="../images/ioboard_done_t.jpg" width="500" height="284" border="1"></a></p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Testing 
+            and soldering order<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p ><strong>If you are concerned that you will not be able to solder the USB chip, we are offering, as an extra service, to prebuild &amp; test USB. Just make sure you request it when you order your kit. </strong>            
+            <p >Since the USB chip is the most difficult part to 
+                solder, this should be done first, so that there is plenty of space 
+                to work in. There are a few techniques for soldering SMD parts. 
+                The two techniques I am a fan of are:
+            <ol>
+              <li>Soldering with silver solder as carefully as possible, and then 
+                using solder wick to clean up</li>
+              <li>Soldering with solder paste, and then using solder wick to clean 
+                up.</li>
+            </ol>
+            <p>There are a bunch of tutorial sites on this (just search on google!):</p>
+            <ul>
+              <li> The <a href="../../../../../www2.silabs.com/public/documents/tpub_doc/anote/Microcontrollers/en/an114.pdf">SMD 
+                tutorial from SILabs</a> (just the part about adding parts)</li>
+              <li><a href="http://www.kevinro.com/newdocs/learningcenter/surface.htm">Kevin
+                Ro's tutorial</a></li>
+            </ul>
+            <p> Here's a straightforward method for soldering this chip using 
+              solder &amp; wick. The magnifying glass comes in very very handy here! Its essential to check for bridged pins and unconnected pins. </p>
+            <ol>
+              <li>If you have flux, spread some on the pads, this will help bridging. 
+                The solder mask should also help a lot.<br>
+                <a href="../images/usb_before.jpg"><img src="../images/usb_before_t.jpg" border="1"></a></li>
+              <li>Place a small amount of solder on a corner pad.</li>
+              <li>Using tweezers, position the chip correctly (the circle on the 
+                picture matches the circle indent on the chip) and heat the corner 
+                pad. When the soldered pad is heated up, align the chip in the 
+                right location, then pull the soldering iron away.<br>
+                <a href="../images/usb_tack1.jpg"><img src="../images/usb_tack1_t.jpg" border="1"></a></li>
+              <li>Place a small amount of solder on the iron tip. Tack the opposite 
+                corner, holding the chip steady with the tweezers.<br>
+                <a href="../images/usb_tack2.jpg"><img src="../images/usb_tack2_t.jpg" border="0"></a></li>
+              <li>Double check that you have the chip positioned right.<br>
+                <img src="../images/usb_tacked.jpg"></li>
+              <li>As carefully as possible, solder the remaining pins. Heat where 
+                the pin and pad meet, then quickly touch some solder to the pin, 
+                the solder should flow down to the pad.<br>
+                <img src="../images/usb_soldered.jpg"></li>
+              <li>Dont worry if you bridge some pins, just fix it with the wick.<br>
+                <a href="../images/usb_wick.jpg"><img src="../images/usb_wick_t.jpg" border="1"></a></li>
+              <li>When you're done, look at the board under a magnifier, or hold 
+                up to the light at an angle to see all the pins<br>
+				<img src="../images/usb_done.jpg"></li>
+           
+                  
+              <li>Ok now that you're done with the USB chip and you're pretty 
+                sure its soldered correctly, solder in all the rest of the components 
+                on the IO board. When soldering in the MIDI/DINSYNC connectors, 
+                make sure to 'pre-stress' them as they are a little flimsy: press 
+                them back so that the face is flush with the PCB while soldering 
+                them in. Be sure to use lots of solder on all the connector components 
+                to make a good mechanical bond.</li>
+                  <li>Power the IO board, but don't connect it to the main board</li>
+                  <li>Plug in the USB into a computer.</li>
+                  <li>The computer should detect a &quot;Serial &lt;-&gt; USB&quot; 
+                    chip and request a driver.</li>
+                  <li>Download the <a href="http://www.ftdichip.com/Drivers/FT232-FT245Drivers.htm#VCP">driver
+                    from FTDI</a>. Make sure to grab the VCP driver. Install it. 
+                    Verify that a new COM port is created (under Windows, look 
+                    under hardware control panel)</li>
+            </ol>
+              </li>
+            </ol>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceBeginRepeatEntry -->
+<div class="textblockheader">
+<!-- InstanceBeginEditable name="Header" -->Parts<!-- InstanceEndEditable -->
+</div>
+
+<div class="textblock">
+<!-- InstanceBeginEditable name="text" --> 
+            <p >&nbsp;</p>
+            <table class="BOM">
+              <tr> 
+                <td class="imagetd"><div align="center"><img src="../../../../../../assets/images/parts/quarter_stereo_t.jpg" width="172" height="130"></div></td>
+                <td>1/4&quot; stereo jack</td>
+                <td>3</td>
+                <td>MIXOUT, MIXIN, HEADPHONE </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/eigthjack.jpg"><img src="../../../../../../assets/images/parts/eigthjack_t.jpg" width="250" height="143" border="0"></a></div></td>
+                <td>1/8&quot; jack</td>
+                <td>2</td>
+                <td>CV, GATE</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><img src="../../../../../../assets/images/parts/USBjackB_t.jpg" width="184" height="150"></div></td>
+                <td>USB type-B jack</td>
+                <td>1</td>
+                <td>USB</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/DINjack.jpg"><img src="../../../../../../assets/images/parts/DINjack_t.jpg" width="200" height="203" border="0"></a></div></td>
+                <td>MIDI/DINSYNC jack</td>
+                <td>4</td>
+                <td>DIN1-4</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/1n4001_t.jpg"><img src="../../../../../../assets/images/parts/1n4148_t.jpg" width="250" height="69" border="0"></a></div></td>
+                <td>1N4148</td>
+                <td>1</td>
+                <td>D48</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table  border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>10 ohm 5% resistor</td>
+                <td>2</td>
+                <td>R186, R164 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>22 ohm 5% resistor </td>
+                <td>1</td>
+                <td>R20</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rViolet_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>27 ohm 5% resistor</td>
+                <td>2</td>
+                <td>R6, R7 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>100 ohm 5% resistor </td>
+                <td>1</td>
+                <td>R16 (see MIDI in note above) </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>220 ohm 5% resistor</td>
+                <td>5</td>
+                <td>R13-R15, R18, R19 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rViolet_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>470 ohm 5% resistor</td>
+                <td>1</td>
+                <td>R12</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>1K 5% resistor </td>
+                <td>1</td>
+                <td>R17</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGreen_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>1.5K 5% resistor</td>
+                <td>1</td>
+                <td>R8</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>2.2K 5% resistor</td>
+                <td>4</td>
+                <td>R21-R24</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rViolet_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rRed_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>4.7K 5% resistor</td>
+                <td>1</td>
+                <td>R9</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rOrange_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>10K 5% resistor</td>
+                <td>2</td>
+                <td>R10, R11 </td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><table class="resistor">
+                    <tr> 
+                      <td><img src="../../../../../../assets/images/parts/resleft_t.gif" width="61" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBrown_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rBlack_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rYellow_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/spacer_t.gif" width="8" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/rGold_t.gif" width="10" height="87"></td>
+                      <td><img src="../../../../../../assets/images/parts/resright_t.gif"></td>
+                    </tr>
+                  </table></td>
+                <td>100K 5% resistor </td>
+                <td>4</td>
+                <td>R25-R28</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/033poly.jpg"><img src="../../../../../../assets/images/parts/033poly_t.jpg" width="137" height="200" border="0"></a></div></td>
+                <td>.033uF (2A333K) polyester capacitor </td>
+                <td>1</td>
+                <td>C201</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/104cerm.jpg"><img src="../../../../../../assets/images/parts/104cerm_t.jpg" width="154" height="200" border="0"></a></div></td>
+                <td>.1uF (104) ceramic</td>
+                <td>2</td>
+                <td>C202, C204</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/10uf.jpg"><img src="../../../../../../assets/images/parts/10uf_t.jpg" width="250" height="86" border="0"></a></div></td>
+                <td>10uF electrolytic capacitor </td>
+                <td>2</td>
+                <td>C203, C205</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/2sc536.jpg"><img src="../../../../../../assets/images/parts/2sc536_t.jpg" width="144" height="250" border="0"></a></div></td>
+                <td>2SC536F, TO-92 NPN transistor </td>
+                <td>1</td>
+                <td>Q50</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/4N37.jpg"><img src="../../../../../../assets/images/parts/4N37_t.jpg" width="200" height="139" border="0"></a></div></td>
+                <td>4N37 optoisolator</td>
+                <td>1</td>
+                <td>IC24</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/ft232.jpg"><img src="../../../../../../assets/images/parts/ft232_t.jpg" width="200" height="167" border="0"></a></div></td>
+                <td>FT232 USB chip</td>
+                <td>1</td>
+                <td>IC25</td>
+              </tr>
+              <tr> 
+                <td class="imagetd"><div align="center"><a href="../../../../../../assets/images/parts/xtal6m.jpg"><img src="../../../../../../assets/images/parts/xtal6m_t.jpg" width="165" height="200" border="0"></a></div></td>
+                <td>6MHz ceramic resonator</td>
+                <td>1</td>
+                <td>XTAL2</td>
+              </tr>
+            </table>
+            <p >&nbsp;</p>
+            <!-- InstanceEndEditable -->
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --></div>
+
+<div id="rightcol">
+<!-- this is just a buffer -->
+</div>
+
+
+
+<div id="history">
+<!-- #BeginDate format:Am1m -->May 17, 2011  20:07<!-- #EndDate --></div>
+
+</body>
+<!-- InstanceEnd -->
+<!-- Mirrored from ladyada.net/make/x0xb0x/fab/ioboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Nov 2015 18:02:34 GMT -->
+</html>
